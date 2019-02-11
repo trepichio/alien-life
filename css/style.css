@@ -1,0 +1,113 @@
+@import url("../assets/fonts/stylesheet.css");
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0; }
+
+*, *::before, *::after {
+  box-sizing: inherit; }
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Museo Sans 500', Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+  margin: 0; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bolder; }
+
+/* header section */
+header {
+  position: relative;
+  background-position: top;
+  padding-top: 15%;
+  overflow: hidden; }
+  header::before {
+    position: absolute;
+    content: '';
+    width: 200%;
+    height: 200%;
+    top: -80px;
+    left: -488px;
+    transform: rotate(172deg) scale(1.2, 0.5);
+    z-index: -1;
+    background-image: url("../assets/images/mars_full.jpg");
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat; }
+  header h1, header h2 {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    font-size: 5rem;
+    letter-spacing: 0.3rem; }
+  header h2 {
+    letter-spacing: 0.1rem;
+    font-size: 2.2rem; }
+
+/* main section */
+main {
+  margin: 5%; }
+  main blockquote {
+    float: left;
+    margin-left: 0;
+    margin-right: 0.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    left: -2rem;
+    font-size: 1.7rem;
+    width: 20%;
+    padding: 3rem 0;
+    border-style: solid;
+    border-width: 4px;
+    border-right: 0;
+    border-left: 0; }
+    main blockquote::before {
+      content: open-quote; }
+    main blockquote::after {
+      content: close-quote; }
+  main h3 {
+    position: relative;
+    left: -2rem; }
+  main figure {
+    float: right;
+    margin-right: 0;
+    margin-left: .5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    right: -2rem;
+    font-size: 1.7rem;
+    width: 20%;
+    padding: 3rem 0;
+    border-style: solid;
+    border-width: 4px;
+    border-right: 0;
+    border-left: 0;
+    border-top-width: 0; }
+    main figure figcaption {
+      text-align: center;
+      font-size: 1.1rem; }
+    main figure img {
+      width: 100%; }
+  main form span {
+    font-style: italic; }
+  main form p {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 2.5rem; }
+  main form label {
+    display: block;
+    margin-left: 10%;
+    line-height: 1.5;
+    font-size: 2rem;
+    color: #44bf40; }
+    main form label:nth-child(even) {
+      color: #bdbf40; }
+    main form label:last-child {
+      color: red; }
+    main form label input[type="radio"] {
+      margin-right: 1rem; }

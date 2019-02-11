@@ -1,0 +1,146 @@
+@import url('../assets/fonts/stylesheet.css');
+@mixin aside($pos) {
+	float: if($pos == left,left,right);
+	@if $pos == left {
+		margin-left: 0;
+		margin-right: 0.5rem;
+	} @else {
+		margin-right: 0;
+		margin-left: .5rem;
+	}
+	margin-bottom: 2rem;		
+	position: relative;
+	#{$pos}: -2rem;
+	font-size: 1.7rem;
+	width: 20%;
+	padding: 3rem 0;
+	border-style: solid;
+	border-width: 4px;
+	border-right: 0;
+	border-left: 0; 
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: 'Museo Sans 500', Arial, sans-serif;
+	background-color: #000;
+	color: #fff;
+	margin: 0;
+
+} 
+
+a {
+	text-decoration: none;
+	color: inherit;
+	font-weight: bolder;
+}
+
+/* header section */
+header {
+	position: relative;
+	background-position: top;
+	padding-top: 15%;
+	overflow: hidden;
+
+	&::before {
+		position: absolute;
+		content:'';
+		width: 200%;
+		height: 200%;
+		top: -33%;left: -50%;
+		transform: rotate(174deg) scale(1.4,0.5);
+		z-index: -1;
+		background-image: url('../assets/images/mars_full.jpg');
+		background-size: contain;
+		background-position: top;
+		background-repeat: no-repeat;
+	}
+
+	h1 {
+		text-transform: uppercase;
+		text-align: center;
+		margin: 0;
+		font-size: 5rem;
+		letter-spacing: 0.3rem;
+	}
+
+	h2 {
+		@extend h1;
+		letter-spacing: 0.1rem;
+		font-size: 2.2rem;
+	}
+
+}
+
+/* main section */
+main {
+	margin: 5%;
+	
+	blockquote {
+		&::before {
+			content: open-quote;
+		}
+		&::after {
+			content: close-quote;
+		}
+		@include aside(left);
+	}
+
+	h3 {
+		position: relative;
+		left: -2rem;
+	}
+
+	figure {
+		@include aside(right);
+		border-top-width: 0;
+		figcaption {
+			text-align: center;
+			font-size: 1.1rem;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	form {
+		
+		span { font-style: italic; }
+		p {
+			text-align: center;
+			font-weight: bolder;
+			font-size: 2.5rem;
+		}
+
+		label {
+			display: block;
+			margin-left: 10%;
+			line-height: 1.5;
+			font-size: 2rem;
+			color: hsl(118,50%,50%);
+			&:nth-child(even){
+				color: hsl(61, 50%,50%);
+			}
+			&:last-child {
+				color: red;
+			}
+
+
+			input[type="radio"] {
+				margin-right: 1rem;
+			}
+		}
+	}
+}
