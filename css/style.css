@@ -15,6 +15,10 @@ body {
   color: #fff;
   margin: 0; }
 
+@media screen and (max-width: 667px) {
+  p {
+    font-size: 1.8rem; } }
+
 a {
   text-decoration: none;
   color: inherit;
@@ -31,9 +35,9 @@ header {
     content: '';
     width: 200%;
     height: 200%;
-    top: -80px;
-    left: -488px;
-    transform: rotate(172deg) scale(1.2, 0.5);
+    top: -33%;
+    left: -50%;
+    transform: rotate(174deg) scale(1.4, 0.5);
     z-index: -1;
     background-image: url("../assets/images/mars_full.jpg");
     background-size: contain;
@@ -65,14 +69,31 @@ main {
     border-style: solid;
     border-width: 4px;
     border-right: 0;
-    border-left: 0; }
+    border-left: 0;
+    /* Portrait */ }
     main blockquote::before {
       content: open-quote; }
     main blockquote::after {
       content: close-quote; }
+    @media screen and (max-width: 768px) {
+      main blockquote {
+        /* Portrait styles */
+        width: 50%;
+        margin-left: 1.2rem;
+        font-size: 2rem; } }
+    @media screen and (max-width: 667px) {
+      main blockquote {
+        width: 100%;
+        text-align: center;
+        left: 0;
+        margin: 2rem 0; } }
   main h3 {
     position: relative;
     left: -2rem; }
+    @media screen and (max-width: 667px) {
+      main h3 {
+        left: 0;
+        font-size: 2.5rem; } }
   main figure {
     float: right;
     margin-right: 0;
@@ -87,10 +108,30 @@ main {
     border-width: 4px;
     border-right: 0;
     border-left: 0;
+    /* Portrait */
     border-top-width: 0; }
+    @media screen and (max-width: 768px) {
+      main figure {
+        /* Portrait styles */
+        width: 50%;
+        margin-right: 1.2rem;
+        font-size: 2rem; } }
+    @media screen and (max-width: 667px) {
+      main figure {
+        width: 100%;
+        text-align: center;
+        right: 0;
+        margin: 2rem 0; } }
     main figure figcaption {
       text-align: center;
       font-size: 1.1rem; }
+      @media screen and (max-width: 768px) {
+        main figure figcaption {
+          /* Portrait styles */
+          font-size: 1.4rem; } }
+      @media screen and (max-width: 667px) {
+        main figure figcaption {
+          font-size: 1.6rem; } }
     main figure img {
       width: 100%; }
   main form span {
@@ -101,10 +142,16 @@ main {
     font-size: 2.5rem; }
   main form label {
     display: block;
-    margin-left: 10%;
+    margin-left: 40%;
     line-height: 1.5;
     font-size: 2rem;
     color: #44bf40; }
+    @media screen and (max-width: 768px) {
+      main form label {
+        margin-left: 25%; } }
+    @media screen and (max-width: 667px) {
+      main form label {
+        margin-left: 0; } }
     main form label:nth-child(even) {
       color: #bdbf40; }
     main form label:last-child {

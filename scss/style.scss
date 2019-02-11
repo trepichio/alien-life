@@ -18,6 +18,21 @@
 	border-width: 4px;
 	border-right: 0;
 	border-left: 0; 
+
+	/* Portrait */
+	@media screen and (max-width: 768px) {
+	    /* Portrait styles */
+		width: 50%;
+		margin-#{$pos}: 1.2rem;
+		font-size: 2rem;
+	}
+
+	@media screen and (max-width: 667px) {
+		width: 100%;
+		text-align: center;	
+		#{$pos}: 0;
+		margin: 2rem 0;
+	}
 }
 
 html {
@@ -39,6 +54,12 @@ body {
 	margin: 0;
 
 } 
+
+p {
+	@media screen and (max-width: 667px) {
+		font-size: 1.8rem;
+    }
+}
 
 a {
 	text-decoration: none;
@@ -100,6 +121,10 @@ main {
 	h3 {
 		position: relative;
 		left: -2rem;
+		@media screen and (max-width: 667px) {
+		   left: 0;
+		   font-size: 2.5rem;
+		}
 	}
 
 	figure {
@@ -108,6 +133,13 @@ main {
 		figcaption {
 			text-align: center;
 			font-size: 1.1rem;
+			@media screen and (max-width: 768px) {
+			    /* Portrait styles */
+				font-size: 1.4rem;
+			}
+			@media screen and (max-width: 667px) {
+				font-size: 1.6rem;
+			}
 		}
 
 		img {
@@ -130,13 +162,21 @@ main {
 			line-height: 1.5;
 			font-size: 2rem;
 			color: hsl(118,50%,50%);
+
+			@media screen and (max-width: 768px) {
+			    margin-left: 25%;
+			}
+			@media screen and (max-width: 667px) {
+				margin-left: 0;
+			}
+
+
 			&:nth-child(even){
 				color: hsl(61, 50%,50%);
 			}
 			&:last-child {
 				color: red;
 			}
-
 
 			input[type="radio"] {
 				margin-right: 1rem;
