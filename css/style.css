@@ -17,7 +17,8 @@ body {
 
 @media screen and (max-width: 667px) {
   p {
-    font-size: 1.8rem; } }
+    font-size: 1.8rem;
+    text-align: justify; } }
 
 a {
   text-decoration: none;
@@ -56,6 +57,9 @@ header {
 /* main section */
 main {
   margin: 5%; }
+  @media screen and (max-width: 667px) {
+    main {
+      margin-top: 15%; } }
   main blockquote {
     float: left;
     margin-left: 0;
@@ -86,7 +90,13 @@ main {
         width: 100%;
         text-align: center;
         left: 0;
-        margin: 2rem 0; } }
+        margin: 2rem 0;
+        font-size: 2.6rem;
+        /* Portrait */ } }
+  @media only screen and (max-width: 667px) and (orientation: landscape) {
+    main blockquote {
+      /* Portrait styles */
+      font-size: 3rem; } }
   main h3 {
     position: relative;
     left: -2rem; }
@@ -121,7 +131,13 @@ main {
         width: 100%;
         text-align: center;
         right: 0;
-        margin: 2rem 0; } }
+        margin: 2rem 0;
+        font-size: 2.6rem;
+        /* Portrait */ } }
+  @media only screen and (max-width: 667px) and (orientation: landscape) {
+    main figure {
+      /* Portrait styles */
+      font-size: 3rem; } }
     main figure figcaption {
       text-align: center;
       font-size: 1.1rem; }
@@ -132,6 +148,10 @@ main {
       @media screen and (max-width: 667px) {
         main figure figcaption {
           font-size: 1.6rem; } }
+  @media only screen and (max-width: 667px) and (orientation: landscape) {
+    main figure figcaption {
+      /* Portrait styles */
+      font-size: 2rem; } }
     main figure img {
       width: 100%; }
   main form span {
@@ -140,6 +160,9 @@ main {
     text-align: center;
     font-weight: bolder;
     font-size: 2.5rem; }
+    @media screen and (max-width: 667px) {
+      main form p {
+        text-align: justify; } }
   main form label {
     display: block;
     margin-left: 40%;
